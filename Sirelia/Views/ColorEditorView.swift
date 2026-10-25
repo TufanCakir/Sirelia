@@ -13,7 +13,7 @@ struct ColorEditorView: View {
     // MARK: - State
 
     @State private var selectedColor: Color = .blue
-    @State private var hexInput = "#0000FF"
+    @State private var hexInput = "#0088FF"
     @State private var copiedValue: String?
 
     @ObservedObject var paletteManager: PaletteManager
@@ -77,7 +77,7 @@ struct ColorEditorView: View {
 
     var body: some View {
         Form {
-            previewSection
+            ColorPreviewSection(color: selectedColor)
             colorPickerSection
 
             PaletteSection(
@@ -85,7 +85,11 @@ struct ColorEditorView: View {
                 savedColors: $paletteManager.savedColors
             )
 
-            contrastSection
+            ColorChannelSection(
+                selectedColor: $selectedColor
+            )
+
+            ColorContrastSection(color: selectedColor)
             colorValuesSection
         }
         .navigationTitle("Farbeditor")
@@ -110,53 +114,6 @@ struct ColorEditorView: View {
         }
     }
 
-    // MARK: - Preview
-
-    private var previewSection: some View {
-        Section {
-            VStack(spacing: 12) {
-                ZStack {
-                    CheckerboardView(cellSize: 12)
-
-                    selectedColor
-                }
-                .frame(height: 150)
-                .clipShape(
-                    RoundedRectangle(cornerRadius: 16)
-                )
-                .overlay {
-                    RoundedRectangle(cornerRadius: 16)
-                        .strokeBorder(
-                            .primary.opacity(0.1),
-                            lineWidth: 1
-                        )
-                }
-
-                HStack {
-                    Label(
-                        hexValue,
-                        systemImage: "number"
-                    )
-                    .font(
-                        .system(
-                            .subheadline,
-                            design: .monospaced
-                        )
-                    )
-
-                    Spacer()
-
-                    Text(
-                        "\(Int((components.alpha * 100).rounded()))% Alpha"
-                    )
-                    .foregroundStyle(.secondary)
-                    .font(.subheadline)
-                }
-            }
-            .padding(.vertical, 4)
-        }
-    }
-
     // MARK: - Color Picker
 
     private var colorPickerSection: some View {
@@ -166,114 +123,7 @@ struct ColorEditorView: View {
                 selection: $selectedColor,
                 supportsOpacity: true
             )
-
-            HStack {
-                Text("Aktuelle Farbe")
-
-                Spacer()
-
-                Circle()
-                    .fill(selectedColor)
-                    .frame(width: 28, height: 28)
-                    .overlay {
-                        Circle()
-                            .strokeBorder(
-                                .primary.opacity(0.15),
-                                lineWidth: 1
-                            )
-                    }
-            }
         }
-    }
-
-    // MARK: - WCAG Contrast
-
-    private var contrastSection: some View {
-        let whiteBackground = Color.white
-        let blackBackground = Color.black
-
-        // Bei Alpha muss die sichtbare Farbe
-        // auf dem Hintergrund berechnet werden.
-        let onWhite = blendedColor(over: whiteBackground)
-        let onBlack = blendedColor(over: blackBackground)
-
-        let whiteRatio = onWhite.contrastRatio(
-            with: whiteBackground
-        )
-
-        let blackRatio = onBlack.contrastRatio(
-            with: blackBackground
-        )
-
-        return Section("WCAG Kontrast-Check") {
-            contrastRow(
-                title: "Text auf Weiß",
-                ratio: whiteRatio
-            )
-
-            contrastRow(
-                title: "Text auf Schwarz",
-                ratio: blackRatio
-            )
-
-            VStack(spacing: 10) {
-                contrastPreview(
-                    textColor: onWhite,
-                    background: .white
-                )
-
-                contrastPreview(
-                    textColor: onBlack,
-                    background: .black
-                )
-            }
-            .padding(.vertical, 4)
-
-            Text(
-                "WCAG AA benötigt mindestens 4,5:1 für normalen Text und 3:1 für großen Text."
-            )
-            .font(.caption)
-            .foregroundStyle(.secondary)
-        }
-    }
-
-    private func contrastRow(
-        title: String,
-        ratio: Double
-    ) -> some View {
-        HStack(spacing: 8) {
-            Text(title)
-
-            Spacer(minLength: 4)
-
-            Text(String(format: "%.2f:1", ratio))
-                .font(
-                    .system(
-                        .subheadline,
-                        design: .monospaced
-                    )
-                )
-                .monospacedDigit()
-
-            AccessibilityBadge(
-                contrastRatio: ratio
-            )
-        }
-    }
-
-    private func contrastPreview(
-        textColor: Color,
-        background: Color
-    ) -> some View {
-        Text("Sirelia – Beispieltext Aa")
-            .font(.headline)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .foregroundStyle(textColor)
-            .background(background)
-            .clipShape(
-                RoundedRectangle(cornerRadius: 10)
-            )
     }
 
     // MARK: - Color Values
@@ -447,21 +297,6 @@ struct ColorEditorView: View {
         hexInput = hexValue
     }
 
-    // MARK: - Alpha Compositing
-
-    private func blendedColor(over background: Color) -> Color {
-        let foreground = components
-        let bg = background.components
-        let alpha = foreground.alpha
-
-        return Color(
-            .sRGB,
-            red: foreground.red * alpha + Double(bg.red) * (1 - alpha),
-            green: foreground.green * alpha + Double(bg.green) * (1 - alpha),
-            blue: foreground.blue * alpha + Double(bg.blue) * (1 - alpha),
-            opacity: 1
-        )
-    }
 }
 
 #Preview {

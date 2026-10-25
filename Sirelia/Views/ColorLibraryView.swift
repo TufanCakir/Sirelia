@@ -7,48 +7,166 @@
 
 import SwiftUI
 
+// MARK: - Editor Type
+
+private enum ColorEditorType: String, CaseIterable, Identifiable {
+    case picker
+    case rgba
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .picker:
+            "Farbeditor"
+        case .rgba:
+            "RGBA-Editor"
+        }
+    }
+
+    var subtitle: String {
+        switch self {
+        case .picker:
+            "Farben auswählen und bearbeiten"
+        case .rgba:
+            "Farbkanäle präzise einstellen"
+        }
+    }
+
+    var symbol: String {
+        switch self {
+        case .picker:
+            "paintpalette"
+        case .rgba:
+            "slider.horizontal.3"
+        }
+    }
+}
+
+// MARK: - Color Library
+
 struct ColorLibraryView: View {
 
     @StateObject private var paletteManager = PaletteManager()
 
-    private let columns = [
-        GridItem(.adaptive(minimum: 160), spacing: 16)
-    ]
-
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 16) {
+        List {
+            Section {
+                ForEach(ColorEditorType.allCases) { type in
+                    NavigationLink {
+                        destination(for: type)
+                    } label: {
+                        HStack(spacing: 14) {
+                            preview(for: type)
+                                .frame(width: 76, height: 64)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 12)
+                                )
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .strokeBorder(
+                                            .primary.opacity(0.08),
+                                            lineWidth: 1
+                                        )
+                                }
+                                .accessibilityHidden(true)
 
-                NavigationLink {
-                    ColorEditorView(
-                        paletteManager: paletteManager
-                    )
-                } label: {
-                    Label(
-                        "Farbeditor",
-                        systemImage: "paintpalette"
-                    )
-                    .frame(maxWidth: .infinity, minHeight: 100)
-                }
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(type.title)
+                                    .font(.headline)
 
-                NavigationLink {
-                    ColorSliderView(
-                        paletteManager: paletteManager
-                    )
-                } label: {
-                    Label(
-                        "RGBA-Editor",
-                        systemImage: "slider.horizontal.3"
-                    )
-                    .frame(maxWidth: .infinity, minHeight: 100)
+                                Text(type.subtitle)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(.vertical, 5)
+                    }
                 }
+            } header: {
+                Text("Farbwerkzeuge")
+            } footer: {
+                Text(
+                    "Wähle ein Werkzeug, um Farben auszuwählen, "
+                        + "Farbkanäle anzupassen und Farbwerte zu kopieren."
+                )
             }
-            .buttonStyle(.bordered)
-            .padding()
         }
         .navigationTitle("Farben")
     }
+
+    // MARK: - Preview
+
+    @ViewBuilder
+    private func preview(
+        for type: ColorEditorType
+    ) -> some View {
+        switch type {
+        case .picker:
+            ZStack {
+                LinearGradient(
+                    colors: [
+                        .red,
+                        .orange,
+                        .yellow,
+                        .green,
+                        .cyan,
+                        .blue,
+                        .purple,
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+
+                Image(systemName: type.symbol)
+                    .font(.system(size: 25, weight: .medium))
+                    .foregroundStyle(.white)
+                    .shadow(
+                        color: .black.opacity(0.35),
+                        radius: 3
+                    )
+            }
+
+        case .rgba:
+            HStack(spacing: 4) {
+                Color.red
+                Color.green
+                Color.blue
+                Color.gray
+            }
+            .overlay {
+                Image(systemName: type.symbol)
+                    .font(.system(size: 25, weight: .medium))
+                    .foregroundStyle(.white)
+                    .shadow(
+                        color: .black.opacity(0.5),
+                        radius: 3
+                    )
+            }
+        }
+    }
+
+    // MARK: - Navigation
+
+    @ViewBuilder
+    private func destination(
+        for type: ColorEditorType
+    ) -> some View {
+        switch type {
+        case .picker:
+            ColorEditorView(
+                paletteManager: paletteManager
+            )
+
+        case .rgba:
+            ColorSliderView(
+                paletteManager: paletteManager
+            )
+        }
+    }
 }
+
+// MARK: - Preview
 
 #Preview {
     NavigationStack {

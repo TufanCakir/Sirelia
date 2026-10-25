@@ -1,0 +1,1520 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "#000000" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "#000000"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "#000000"
+          }
+        }
+      }
+    },
+    "%@ Wert eingeben" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@ Wert eingeben"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Enter %@ value"
+          }
+        }
+      }
+    },
+    "%@ zu 1" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@ zu 1"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@ to 1"
+          }
+        }
+      }
+    },
+    "%@ zurücksetzen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Reset %@"
+          }
+        }
+      }
+    },
+    "%@, %lld Prozent Deckkraft" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$lld Prozent Deckkraft"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@, %2$lld per cent opacity"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld Farben" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farbe"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farben"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farben"
+                }
+              }
+            }
+          }
+        },
+        "en-GB" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld colour"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld colours"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld colours"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld pt" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld pt"
+          }
+        }
+      }
+    },
+    "%lld/10" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld/10"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
+    },
+    "%lld%% Alpha" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld%% alpha"
+          }
+        }
+      }
+    },
+    "%lld°" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld°"
+          }
+        }
+      }
+    },
+    "%lld° – %lld°" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld° – %2$lld°"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$lld° – %2$lld°"
+          }
+        }
+      }
+    },
+    "Abbrechen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Aktuelle Farbe speichern" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Save Current Colour"
+          }
+        }
+      }
+    },
+    "Aktuelle Farbe zur Palette hinzufügen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Aktuelle Farbe zur Palette hinzufügen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Add Current Colour to Palette"
+          }
+        }
+      }
+    },
+    "Alle Farben löschen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Alle Farben löschen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Delete All Colours"
+          }
+        }
+      }
+    },
+    "Alle gespeicherten Farben werden entfernt." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Alle gespeicherten Farben werden entfernt."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "All saved colours will be removed."
+          }
+        }
+      }
+    },
+    "Alle löschen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Alle löschen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Delete All"
+          }
+        }
+      }
+    },
+    "Angular" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Angular"
+          }
+        }
+      }
+    },
+    "Angular Gradient" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Angular Gradient"
+          }
+        }
+      }
+    },
+    "App-Sprache" : {
+      "comment" : "A label for the app's language picker.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "App Language"
+          }
+        }
+      }
+    },
+    "Aus Favoriten entfernen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Remove from Favourites"
+          }
+        }
+      }
+    },
+    "Bestimme die Farben und ihre Positionen im Verlauf." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Choose the colours and their positions in the gradient."
+          }
+        }
+      }
+    },
+    "Code teilen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Share Code"
+          }
+        }
+      }
+    },
+    "Darstellung" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Appearance"
+          }
+        }
+      }
+    },
+    "Deckkraft" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Opacity"
+          }
+        }
+      }
+    },
+    "Deutsch" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "German"
+          }
+        }
+      }
+    },
+    "Die Position bestimmt, an welcher Stelle des Winkelverlaufs eine Farbe erscheint." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "The position determines where a colour appears in the angular gradient."
+          }
+        }
+      }
+    },
+    "Die Radien sind relative Werte. Die Form passt sich automatisch dem Seitenverhältnis an." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "The radii are relative values. The shape automatically adapts to the aspect ratio."
+          }
+        }
+      }
+    },
+    "Doppeltippen zum Auswählen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Doppeltippen zum Auswählen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Double-tap to select"
+          }
+        }
+      }
+    },
+    "Dunkel" : {
+      "comment" : "Display name for the \"dark\" color scheme.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Dunkel"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Dark"
+          }
+        }
+      }
+    },
+    "Einstellungen" : {
+      "comment" : "A tab for settings in the Sirelia app.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Elliptical Gradient" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Elliptischer Farbverlauf"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Elliptical Gradient"
+          }
+        }
+      }
+    },
+    "Elliptisch" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Elliptisch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Elliptical"
+          }
+        }
+      }
+    },
+    "Endradius" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Endradius"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "End Radius"
+          }
+        }
+      }
+    },
+    "Englisch" : {
+      "comment" : "Displayed language option in the settings.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Englisch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "English"
+          }
+        }
+      }
+    },
+    "Erscheinungsbild" : {
+      "comment" : "The title of a picker that lets the user choose the app's appearance.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Erscheinungsbild"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Appearance"
+          }
+        }
+      }
+    },
+    "Export" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Export"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Export"
+          }
+        }
+      }
+    },
+    "Farbauswahl" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbauswahl"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Selection"
+          }
+        }
+      }
+    },
+    "Farbe" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbe"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour"
+          }
+        }
+      }
+    },
+    "Farbe auswählen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbe auswählen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Select Colour"
+          }
+        }
+      }
+    },
+    "Farbe bereits gespeichert" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbe bereits gespeichert"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour already saved"
+          }
+        }
+      }
+    },
+    "Farbe löschen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbe löschen"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Delete Colour"
+          }
+        }
+      }
+    },
+    "Farbeditor" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbeditor"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Editor"
+          }
+        }
+      }
+    },
+    "Farben" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colours"
+          }
+        }
+      }
+    },
+    "Farbpunkt entfernen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Remove Colour Stop"
+          }
+        }
+      }
+    },
+    "Farbpunkt hinzufügen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Add Colour Stop"
+          }
+        }
+      }
+    },
+    "Farbpunkte" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Stops"
+          }
+        }
+      }
+    },
+    "Farbslider" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Sliders"
+          }
+        }
+      }
+    },
+    "Farbvorschau" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Preview"
+          }
+        }
+      }
+    },
+    "Farbwerkzeuge" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Tools"
+          }
+        }
+      }
+    },
+    "Farbwert kopieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copy Colour Value"
+          }
+        }
+      }
+    },
+    "Farbwerte" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Colour Values"
+          }
+        }
+      }
+    },
+    "Fertig" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "Format" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Format"
+          }
+        }
+      }
+    },
+    "Für diese Kategorie sind noch keine Symbole hinterlegt." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "No symbols have been added to this category yet."
+          }
+        }
+      }
+    },
+    "Gesamtdeckkraft" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Overall Opacity"
+          }
+        }
+      }
+    },
+    "Gesamte Palette löschen?" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Delete Entire Palette?"
+          }
+        }
+      }
+    },
+    "Gespeicherte Farbe %@" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Saved colour %@"
+          }
+        }
+      }
+    },
+    "Gespeicherte Palette" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Saved Palette"
+          }
+        }
+      }
+    },
+    "Gradient-Editoren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gradient Editors"
+          }
+        }
+      }
+    },
+    "Halbkreis" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Semicircle"
+          }
+        }
+      }
+    },
+    "Hell" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Light"
+          }
+        }
+      }
+    },
+    "HEX" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "HEX"
+          }
+        }
+      }
+    },
+    "HEX kopieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copy HEX"
+          }
+        }
+      }
+    },
+    "Hierarchisch" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Hierarchical"
+          }
+        }
+      }
+    },
+    "Horizontal (X)" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Horizontal (X)"
+          }
+        }
+      }
+    },
+    "Jeder Farbpunkt besitzt eine eigene Farbe und Position." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Each colour stop has its own colour and position."
+          }
+        }
+      }
+    },
+    "Keine Symbole gefunden" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "No Symbols Found"
+          }
+        }
+      }
+    },
+    "Kontrastverhältnis" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Contrast Ratio"
+          }
+        }
+      }
+    },
+    "Kopiert" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copied"
+          }
+        }
+      }
+    },
+    "Lege Farben und ihre Positionen innerhalb des elliptischen Verlaufs fest." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Choose the colours and their positions within the elliptical gradient."
+          }
+        }
+      }
+    },
+    "Linear" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Linear"
+          }
+        }
+      }
+    },
+    "Linear Gradient" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Linear Gradient"
+          }
+        }
+      }
+    },
+    "Mehrfarbig" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Multicolour"
+          }
+        }
+      }
+    },
+    "Mit „System“ folgt Sirelia automatisch dem Erscheinungsbild des iPhone." : {
+      "comment" : "A description of the system-based interface option in the settings.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "When “System” is selected, Sirelia automatically matches your iPhone’s appearance."
+          }
+        }
+      }
+    },
+    "Mit „Systemsprache“ verwendet Sirelia automatisch die bevorzugte Sprache des iPhone." : {
+      "comment" : "A footer for the language settings section of the settings view.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "When “System Language” is selected, Sirelia automatically uses your iPhone’s preferred language."
+          }
+        }
+      }
+    },
+    "Mittelpunkt" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Centre"
+          }
+        }
+      }
+    },
+    "Mittelpunkt über die Regler verändern" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Adjust the centre using the sliders"
+          }
+        }
+      }
+    },
+    "Mittelpunkt zentrieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Centre Gradient"
+          }
+        }
+      }
+    },
+    "Monochrom" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Monochrome"
+          }
+        }
+      }
+    },
+    "Noch keine Farben gespeichert" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "No colours saved yet"
+          }
+        }
+      }
+    },
+    "Öffnet Details und Exportoptionen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Opens details and export options"
+          }
+        }
+      }
+    },
+    "Palette" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Palette"
+          }
+        }
+      }
+    },
+    "Radial" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radial"
+          }
+        }
+      }
+    },
+    "Radial Gradient" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radial Gradient"
+          }
+        }
+      }
+    },
+    "Radialer Farbverlauf" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radial Gradient"
+          }
+        }
+      }
+    },
+    "Radius" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radius"
+          }
+        }
+      }
+    },
+    "RGBA Kanäle" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "RGBA Channels"
+          }
+        }
+      }
+    },
+    "RGBA kopieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copy RGBA"
+          }
+        }
+      }
+    },
+    "Richtung" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Direction"
+          }
+        }
+      }
+    },
+    "SF Symbols" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SF Symbols"
+          }
+        }
+      }
+    },
+    "Sirelia – Beispieltext Aa" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Sirelia – Sample Text Aa"
+          }
+        }
+      }
+    },
+    "Sprache" : {
+      "comment" : "The section header for language settings.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Language"
+          }
+        }
+      }
+    },
+    "Startradius" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Start Radius"
+          }
+        }
+      }
+    },
+    "Startwinkel" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Start Angle"
+          }
+        }
+      }
+    },
+    "SwiftUI" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SwiftUI"
+          }
+        }
+      }
+    },
+    "SwiftUI-Code kopieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copy SwiftUI Code"
+          }
+        }
+      }
+    },
+    "SwiftUI-Code kopiert" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SwiftUI Code Copied"
+          }
+        }
+      }
+    },
+    "Symbol" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol"
+          }
+        }
+      }
+    },
+    "Symbol %@" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol %@"
+          }
+        }
+      }
+    },
+    "Symbole" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbols"
+          }
+        }
+      }
+    },
+    "Symbolgröße" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol Size"
+          }
+        }
+      }
+    },
+    "Symbolname" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol Name"
+          }
+        }
+      }
+    },
+    "Symbolname kopieren" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Copy Symbol Name"
+          }
+        }
+      }
+    },
+    "Symbolnamen suchen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Search Symbol Names"
+          }
+        }
+      }
+    },
+    "System" : {
+      "comment" : "Display name for the system appearance mode.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "System"
+          }
+        }
+      }
+    },
+    "Systemsprache" : {
+      "comment" : "Label for the language settings section in the settings view.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "System Language"
+          }
+        }
+      }
+    },
+    "Text auf Schwarz" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Text on Black"
+          }
+        }
+      }
+    },
+    "Text auf Weiß" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Text on White"
+          }
+        }
+      }
+    },
+    "Verläufe" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gradients"
+          }
+        }
+      }
+    },
+    "Vertikal (Y)" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vertical (Y)"
+          }
+        }
+      }
+    },
+    "Vollkreis" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Full Circle"
+          }
+        }
+      }
+    },
+    "Vorlage %@" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Preset %@"
+          }
+        }
+      }
+    },
+    "Vorlagen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Presets"
+          }
+        }
+      }
+    },
+    "Vorschau" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Preview"
+          }
+        }
+      }
+    },
+    "WCAG AA benötigt mindestens 4,5:1 für normalen Text und 3:1 für großen Text." : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "WCAG AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text."
+          }
+        }
+      }
+    },
+    "WCAG Kontrast-Check" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "WCAG Contrast Check"
+          }
+        }
+      }
+    },
+    "Winkel" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Angle"
+          }
+        }
+      }
+    },
+    "Winkel %lld Grad" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              }
+            }
+          }
+        },
+        "en-GB" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Angle %lld degree"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Angle %lld degrees"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Angle %lld degrees"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Winkelbereich" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Angle Range"
+          }
+        }
+      }
+    },
+    "X %lld%% · Y %lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "X %1$lld%% · Y %2$lld%%"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "X %1$lld%% · Y %2$lld%%"
+          }
+        }
+      }
+    },
+    "Zu Favoriten hinzufügen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Add to Favourites"
+          }
+        }
+      }
+    },
+    "Zurücksetzen" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "Zweitfarbe" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Secondary Colour"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.3"
+}

@@ -12,8 +12,8 @@ struct SFSymbolPickerView: View {
     @State private var searchText = ""
     @State private var selectedCategory = "Alle"
 
-    @State private var selectedColor: Color = .black
-    @State private var secondaryColor: Color = .purple
+    @State private var selectedColor: Color = .blue
+    @State private var secondaryColor: Color = .red
 
     @State private var symbolSize: Double = 30
     @State private var displayMode: SymbolDisplayMode = .monochrome
@@ -174,35 +174,20 @@ struct SFSymbolPickerView: View {
 
     // MARK: - Main View
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             controlsSection
 
             categorySection
 
             Divider()
 
-            ScrollView {
-                LazyVGrid(
-                    columns: columns,
-                    spacing: 12
-                ) {
-                    ForEach(filteredSymbols, id: \.self) { symbol in
-                        symbolCard(symbol)
-                    }
-                }
-                .padding()
-            }
-            .overlay {
-                if filteredSymbols.isEmpty {
-                    ContentUnavailableView(
-                        "Keine Symbole gefunden",
-                        systemImage: "magnifyingglass",
-                        description: Text(
-                            "Für diese Kategorie sind noch keine Symbole hinterlegt."
-                        )
-                    )
+            TabView(selection: $selectedCategory) {
+                ForEach(categories, id: \.self) { category in
+                    symbolPage(for: category)
+                        .tag(category)
                 }
             }
+            .tabViewStyle(.page(indexDisplayMode: .never))
         }
         .navigationTitle("SF Symbols")
         .searchable(
@@ -216,7 +201,33 @@ struct SFSymbolPickerView: View {
             favorites = decodeFavorites()
         }
         .sensoryFeedback(.success, trigger: copyFeedbackTrigger)
+    }
 
+    private func symbolPage(for category: String) -> some View {
+        let symbols = filteredSymbols(for: category)
+
+        return ScrollView {
+            LazyVGrid(
+                columns: columns,
+                spacing: 12
+            ) {
+                ForEach(symbols, id: \.self) { symbol in
+                    symbolCard(symbol)
+                }
+            }
+            .padding()
+        }
+        .overlay {
+            if symbols.isEmpty {
+                ContentUnavailableView(
+                    "Keine Symbole gefunden",
+                    systemImage: "magnifyingglass",
+                    description: Text(
+                        "Für diese Kategorie sind noch keine Symbole hinterlegt."
+                    )
+                )
+            }
+        }
     }
 
     // MARK: - Controls
@@ -555,13 +566,13 @@ struct SFSymbolPickerView: View {
         Array(Set(symbolsByCategory.values.flatMap { $0 })).sorted()
     }
 
-    private var filteredSymbols: [String] {
+    private func filteredSymbols(for category: String) -> [String] {
         let symbols: [String]
 
-        if selectedCategory == "Alle" {
+        if category == "Alle" {
             symbols = allSymbols
         } else {
-            symbols = symbolsByCategory[selectedCategory] ?? []
+            symbols = symbolsByCategory[category] ?? []
         }
 
         return searchText.isEmpty

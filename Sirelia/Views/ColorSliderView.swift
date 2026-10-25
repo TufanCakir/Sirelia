@@ -9,236 +9,161 @@ import SwiftUI
 import UIKit
 
 struct ColorSliderView: View {
-    @State private var red: Double = 0
-    @State private var green: Double = 0
-    @State private var blue: Double = 255
-    @State private var alpha: Double = 100
 
+    // MARK: - State
+
+    @State private var selectedColor: Color = .blue
     @State private var hexInput = "#0000FF"
+    @State private var copiedValue: String?
+
     @FocusState private var hexIsFocused: Bool
 
     @ObservedObject var paletteManager: PaletteManager
 
-    private var selectedColor: Color {
-        Color(
-            .sRGB,
-            red: red / 255,
-            green: green / 255,
-            blue: blue / 255,
-            opacity: alpha / 100
+    // MARK: - Color Components
+
+    private var components:
+        (
+            red: Double,
+            green: Double,
+            blue: Double,
+            alpha: Double
+        )
+    {
+        let value = selectedColor.components
+
+        return (
+            Double(value.red),
+            Double(value.green),
+            Double(value.blue),
+            Double(value.alpha)
         )
     }
 
-    private var rgbColor: Color {
-        Color(
-            .sRGB,
-            red: red / 255,
-            green: green / 255,
-            blue: blue / 255,
-            opacity: 1
-        )
-    }
-
-    private var colorBinding: Binding<Color> {
-        Binding(
-            get: { selectedColor },
-            set: { updateChannels(from: $0) }
-        )
-    }
+    // MARK: - Color Values
 
     private var hexValue: String {
-        String(
+        let c = components
+
+        return String(
             format: "#%02X%02X%02X",
-            Int(red.rounded()),
-            Int(green.rounded()),
-            Int(blue.rounded())
+            Int((c.red * 255).rounded()),
+            Int((c.green * 255).rounded()),
+            Int((c.blue * 255).rounded())
+        )
+    }
+
+    private var hexAlphaValue: String {
+        String(
+            format: "%@%02X",
+            hexValue,
+            Int((components.alpha * 255).rounded())
+        )
+    }
+
+    private var rgbValue: String {
+        let c = components
+
+        return String(
+            format: "%d, %d, %d",
+            Int((c.red * 255).rounded()),
+            Int((c.green * 255).rounded()),
+            Int((c.blue * 255).rounded())
         )
     }
 
     private var rgbaValue: String {
-        String(
+        let c = components
+
+        return String(
             format: "rgba(%d, %d, %d, %.2f)",
-            Int(red.rounded()),
-            Int(green.rounded()),
-            Int(blue.rounded()),
-            alpha / 100
+            Int((c.red * 255).rounded()),
+            Int((c.green * 255).rounded()),
+            Int((c.blue * 255).rounded()),
+            c.alpha
         )
     }
 
+    private var swiftUIColorValue: String {
+        let c = components
+
+        return String(
+            format:
+                "Color(.sRGB, red: %.4f, green: %.4f, blue: %.4f, opacity: %.4f)",
+            c.red,
+            c.green,
+            c.blue,
+            c.alpha
+        )
+    }
+
+    // MARK: - Body
+
     var body: some View {
         Form {
-            Section {
-                colorPreview
-            }
+
+            ColorPreviewSection(
+                color: selectedColor
+            )
 
             PaletteSection(
-                selectedColor: colorBinding,
+                selectedColor: $selectedColor,
                 savedColors: $paletteManager.savedColors
             )
 
-            Section("RGBA Kanäle") {
-                ColorSlider(
-                    label: "Rot",
-                    value: $red,
-                    color: .red
-                )
+            ColorChannelSection(
+                selectedColor: $selectedColor,
+                showsAlpha: true
+            )
 
-                ColorSlider(
-                    label: "Grün",
-                    value: $green,
-                    color: .green
-                )
+            ColorContrastSection(
+                color: selectedColor
+            )
 
-                ColorSlider(
-                    label: "Blau",
-                    value: $blue,
-                    color: .blue
-                )
-
-                ColorSlider(
-                    label: "Deckkraft",
-                    value: $alpha,
-                    range: 0...100,
-                    format: "%.0f%%",
-                    color: .gray
-                )
-            }
-
-            contrastSection
             colorValuesSection
         }
-        .navigationTitle("Farbeditor")
-        .onChange(of: red) { _, _ in syncHex() }
-        .onChange(of: green) { _, _ in syncHex() }
-        .onChange(of: blue) { _, _ in syncHex() }
-        .onChange(of: hexIsFocused) { _, focused in
-            if !focused {
-                applyHex()
-                hexInput = hexValue
+        .navigationTitle("Farbslider")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(
+                    "Zurücksetzen",
+                    systemImage: "arrow.counterclockwise"
+                ) {
+                    resetColor()
+                }
+                .disabled(hexValue == "#0000FF" && components.alpha == 1)
             }
         }
         .onAppear {
-            hexInput = hexValue
+            syncHex()
         }
-    }
-
-    // MARK: - Farbvorschau
-
-    private var colorPreview: some View {
-        VStack(spacing: 12) {
-            ZStack {
-                CheckerboardView()
-                selectedColor
-            }
-            .frame(height: 140)
-            .clipShape(
-                RoundedRectangle(cornerRadius: 14)
-            )
-            .overlay {
-                RoundedRectangle(cornerRadius: 14)
-                    .strokeBorder(
-                        .primary.opacity(0.1),
-                        lineWidth: 1
-                    )
-            }
-
-            HStack {
-                Label(hexValue, systemImage: "number")
-                    .font(.system(.subheadline, design: .monospaced))
-
-                Spacer()
-
-                Text("\(Int(alpha.rounded()))% Alpha")
-                    .foregroundStyle(.secondary)
-            }
+        .onChange(of: selectedColor) { _, _ in
+            syncHex()
+            copiedValue = nil
         }
-        .padding(.vertical, 4)
-    }
-
-    // MARK: - WCAG
-
-    private var contrastSection: some View {
-        // WCAG-Kontrast wird mit der tatsächlich
-        // sichtbaren Farbe berechnet.
-        let onWhite = compositedColor(on: .white)
-        let onBlack = compositedColor(on: .black)
-
-        let whiteRatio = onWhite.contrastRatio(with: .white)
-        let blackRatio = onBlack.contrastRatio(with: .black)
-
-        return Section("WCAG Kontrast-Check") {
-            contrastRow(
-                title: "Auf Weiß",
-                ratio: whiteRatio
-            )
-
-            contrastRow(
-                title: "Auf Schwarz",
-                ratio: blackRatio
-            )
-
-            VStack(spacing: 8) {
-                contrastPreview(
-                    background: .white,
-                    foreground: onWhite,
-                    ratio: whiteRatio
-                )
-
-                contrastPreview(
-                    background: .black,
-                    foreground: onBlack,
-                    ratio: blackRatio
-                )
+        .onChange(of: hexIsFocused) { _, focused in
+            if !focused {
+                applyHex()
             }
         }
     }
 
-    private func contrastRow(
-        title: String,
-        ratio: Double
-    ) -> some View {
-        HStack {
-            Text(title)
-
-            Spacer(minLength: 8)
-
-            Text(String(format: "%.2f:1", ratio))
-                .font(.system(.subheadline, design: .monospaced))
-                .monospacedDigit()
-
-            AccessibilityBadge(contrastRatio: ratio)
-        }
-    }
-
-    private func contrastPreview(
-        background: Color,
-        foreground: Color,
-        ratio: Double
-    ) -> some View {
-        Text("Beispieltext Aa")
-            .font(.headline)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .foregroundStyle(foreground)
-            .background(background)
-            .clipShape(
-                RoundedRectangle(cornerRadius: 10)
-            )
-            .accessibilityLabel(
-                "Beispieltext, Kontrast \(String(format: "%.2f", ratio)) zu 1"
-            )
-    }
-
-    // MARK: - Farbwerte
+    // MARK: - Color Values Section
 
     private var colorValuesSection: some View {
         Section("Farbwerte") {
+
             HStack(spacing: 12) {
                 Text("HEX")
                     .fontWeight(.medium)
 
                 TextField("#000000", text: $hexInput)
-                    .font(.system(.body, design: .monospaced))
+                    .font(
+                        .system(
+                            .body,
+                            design: .monospaced
+                        )
+                    )
                     .textFieldStyle(.roundedBorder)
                     .textInputAutocapitalization(.characters)
                     .autocorrectionDisabled()
@@ -249,100 +174,161 @@ struct ColorSliderView: View {
                         hexIsFocused = false
                     }
 
-                copyButton(hexValue)
-            }
-
-            HStack(spacing: 12) {
-                Text("RGBA")
-                    .fontWeight(.medium)
-
-                Spacer(minLength: 4)
-
-                Text(rgbaValue)
-                    .font(.system(.caption, design: .monospaced))
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-
-                copyButton(rgbaValue)
-            }
-
-            HStack {
-                Text("RGB")
-                    .fontWeight(.medium)
-
-                Spacer()
-
-                Text(
-                    "\(Int(red.rounded())), " + "\(Int(green.rounded())), "
-                        + "\(Int(blue.rounded()))"
-                )
-                .font(.system(.subheadline, design: .monospaced))
-                .foregroundStyle(.secondary)
-
                 copyButton(
-                    "\(Int(red.rounded())), " + "\(Int(green.rounded())), "
-                        + "\(Int(blue.rounded()))"
+                    value: hexValue,
+                    identifier: "hex"
                 )
             }
+
+            valueRow(
+                title: "HEX Alpha",
+                value: hexAlphaValue,
+                identifier: "hexAlpha"
+            )
+
+            valueRow(
+                title: "RGB",
+                value: rgbValue,
+                identifier: "rgb"
+            )
+
+            valueRow(
+                title: "RGBA",
+                value: rgbaValue,
+                identifier: "rgba"
+            )
+
+            valueRow(
+                title: "SwiftUI",
+                value: swiftUIColorValue,
+                identifier: "swiftui"
+            )
         }
     }
 
-    private func copyButton(_ value: String) -> some View {
-        ShareLink(item: value) {
-            Image(systemName: "square.and.arrow.up")
+    // MARK: - Value Row
+
+    private func valueRow(
+        title: String,
+        value: String,
+        identifier: String
+    ) -> some View {
+        HStack(spacing: 8) {
+            Text(title)
+                .fontWeight(.medium)
+
+            Spacer(minLength: 4)
+
+            Text(value)
+                .font(
+                    .system(
+                        .caption,
+                        design: .monospaced
+                    )
+                )
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .truncationMode(.middle)
+
+            copyButton(
+                value: value,
+                identifier: identifier
+            )
         }
-        .labelStyle(.iconOnly)
-        .accessibilityLabel("Farbwert teilen")
     }
 
-    // MARK: - Farbverwaltung
+    // MARK: - Copy Button
+
+    private func copyButton(
+        value: String,
+        identifier: String
+    ) -> some View {
+        Button {
+            UIPasteboard.general.string = value
+            copiedValue = identifier
+        } label: {
+            Image(
+                systemName: copiedValue == identifier
+                    ? "checkmark"
+                    : "doc.on.doc"
+            )
+            .contentTransition(.symbolEffect(.replace))
+        }
+        .buttonStyle(.borderless)
+        .accessibilityLabel(
+            copiedValue == identifier
+                ? "Kopiert"
+                : "Farbwert kopieren"
+        )
+    }
+
+    // MARK: - HEX Synchronization
 
     private func syncHex() {
         guard !hexIsFocused else { return }
         hexInput = hexValue
     }
 
+    // MARK: - Apply HEX
+
     private func applyHex() {
-        guard let color = Color(hex: hexInput) else {
+        let raw =
+            hexInput
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: "#", with: "")
+
+        guard
+            raw.count == 6 || raw.count == 8,
+            raw.allSatisfy({ $0.isHexDigit }),
+            let value = UInt64(raw, radix: 16)
+        else {
             hexInput = hexValue
             return
         }
 
-        let components = color.components
+        let red: Double
+        let green: Double
+        let blue: Double
+        let alpha: Double
 
-        red = Double(components.red) * 255
-        green = Double(components.green) * 255
-        blue = Double(components.blue) * 255
-        alpha = Double(components.alpha) * 100
+        if raw.count == 8 {
+            red = Double((value >> 24) & 0xFF) / 255
+            green = Double((value >> 16) & 0xFF) / 255
+            blue = Double((value >> 8) & 0xFF) / 255
+            alpha = Double(value & 0xFF) / 255
+        } else {
+            red = Double((value >> 16) & 0xFF) / 255
+            green = Double((value >> 8) & 0xFF) / 255
+            blue = Double(value & 0xFF) / 255
+
+            // Keep current opacity for 6-digit HEX.
+            alpha = components.alpha
+        }
+
+        selectedColor = Color(
+            .sRGB,
+            red: red,
+            green: green,
+            blue: blue,
+            opacity: alpha
+        )
 
         hexInput = hexValue
     }
 
-    private func updateChannels(from color: Color) {
-        let components = color.components
+    // MARK: - Reset
 
-        red = Double(components.red) * 255
-        green = Double(components.green) * 255
-        blue = Double(components.blue) * 255
-        alpha = Double(components.alpha) * 100
+    private func resetColor() {
+        selectedColor = .blue
+        copiedValue = nil
 
-        syncHex()
-    }
-
-    private func compositedColor(on background: Color) -> Color {
-        let bg = background.components
-        let opacity = alpha / 100
-
-        return Color(
-            .sRGB,
-            red: (red / 255) * opacity + Double(bg.red) * (1 - opacity),
-            green: (green / 255) * opacity + Double(bg.green) * (1 - opacity),
-            blue: (blue / 255) * opacity + Double(bg.blue) * (1 - opacity),
-            opacity: 1
-        )
+        if !hexIsFocused {
+            hexInput = hexValue
+        }
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     NavigationStack {
