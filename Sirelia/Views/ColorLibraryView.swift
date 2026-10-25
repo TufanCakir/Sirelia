@@ -15,7 +15,7 @@ private enum ColorEditorType: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var title: String {
+    var title: LocalizedStringResource {
         switch self {
         case .picker:
             "Farbeditor"
@@ -24,7 +24,7 @@ private enum ColorEditorType: String, CaseIterable, Identifiable {
         }
     }
 
-    var subtitle: String {
+    var subtitle: LocalizedStringResource {
         switch self {
         case .picker:
             "Farben auswählen und bearbeiten"
@@ -87,8 +87,7 @@ struct ColorLibraryView: View {
                 Text("Farbwerkzeuge")
             } footer: {
                 Text(
-                    "Wähle ein Werkzeug, um Farben auszuwählen, "
-                        + "Farbkanäle anzupassen und Farbwerte zu kopieren."
+                    "Wähle ein Werkzeug, um Farben auszuwählen, Farbkanäle anzupassen und Farbwerte zu kopieren."
                 )
             }
         }

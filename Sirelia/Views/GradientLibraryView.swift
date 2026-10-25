@@ -15,7 +15,7 @@ private enum GradientType: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var title: String {
+    var title: LocalizedStringResource {
         switch self {
         case .linear: "Linear"
         case .radial: "Radial"
@@ -24,7 +24,7 @@ private enum GradientType: String, CaseIterable, Identifiable {
         }
     }
 
-    var subtitle: String {
+    var subtitle: LocalizedStringResource {
         switch self {
         case .linear:
             "Geradliniger Farbverlauf"
@@ -79,8 +79,7 @@ struct GradientLibraryView: View {
                 Text("Gradient-Editoren")
             } footer: {
                 Text(
-                    "Wähle einen Verlaufstyp, um Farben, "
-                        + "Positionen und weitere Eigenschaften anzupassen."
+                    "Wähle einen Verlaufstyp, um Farben, Positionen und weitere Eigenschaften anzupassen."
                 )
             }
         }
