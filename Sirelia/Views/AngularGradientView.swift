@@ -175,7 +175,7 @@ struct AngularGradientView: View {
 
     private var colorStopsSection: some View {
         Section {
-            ForEach(sortedStops) { stop in
+            ForEach(stops) { stop in
                 stopRow(for: stop)
             }
 

@@ -18,6 +18,7 @@
       }
     },
     "%@ Wert eingeben" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -50,7 +51,14 @@
       }
     },
     "%@ zurücksetzen" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%@ zurücksetzen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -61,6 +69,12 @@
     },
     "%@, %lld Prozent Deckkraft" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$@, %2$lld Prozent Deckkraft"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -77,6 +91,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -87,6 +107,30 @@
     },
     "%lld Farben" : {
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farbe"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farben"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "%lld Farben"
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -139,6 +183,12 @@
     },
     "%lld pt" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld pt"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -149,6 +199,12 @@
     },
     "%lld/10" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld/10"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -159,6 +215,12 @@
     },
     "%lld%%" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld %%"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -169,6 +231,12 @@
     },
     "%lld%% Alpha" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld %% Alpha"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -179,6 +247,12 @@
     },
     "%lld°" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%lld°"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -189,6 +263,12 @@
     },
     "%lld° – %lld°" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "%1$lld° – %2$lld°"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -205,6 +285,12 @@
     },
     "Abbrechen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Abbrechen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -215,6 +301,12 @@
     },
     "Aktuelle Farbe speichern" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Aktuelle Farbe sichern"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -289,6 +381,12 @@
     },
     "Angular" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Winkel"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -299,6 +397,12 @@
     },
     "Angular Gradient" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Winkelverlauf"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -311,6 +415,12 @@
       "comment" : "A label for the app's language picker.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "App-Sprache"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -321,6 +431,12 @@
     },
     "Aus Favoriten entfernen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Aus Favoriten entfernen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -331,6 +447,12 @@
     },
     "Bestimme die Farben und ihre Positionen im Verlauf." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Bestimme die Farben und ihre Positionen im Verlauf."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -339,8 +461,32 @@
         }
       }
     },
+    "Blau" : {
+      "comment" : "Text for the color slider for blue.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Blau"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Blue"
+          }
+        }
+      }
+    },
     "Code teilen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Code teilen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -351,6 +497,12 @@
     },
     "Darstellung" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Darstellung"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -361,6 +513,12 @@
     },
     "Deckkraft" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Deckkraft"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -371,6 +529,12 @@
     },
     "Deutsch" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Deutsch"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -381,6 +545,12 @@
     },
     "Die Position bestimmt, an welcher Stelle des Winkelverlaufs eine Farbe erscheint." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Die Position bestimmt, an welcher Stelle des Winkelverlaufs eine Farbe erscheint."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -391,6 +561,12 @@
     },
     "Die Radien sind relative Werte. Die Form passt sich automatisch dem Seitenverhältnis an." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Die Radien sind relative Werte. Die Form passt sich automatisch dem Seitenverhältnis an."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -649,6 +825,12 @@
     },
     "Farben" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farben"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -659,6 +841,12 @@
     },
     "Farbpunkt entfernen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbpunkt entfernen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -669,6 +857,12 @@
     },
     "Farbpunkt hinzufügen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbpunkt hinzufügen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -679,6 +873,12 @@
     },
     "Farbpunkte" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbpunkte"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -689,6 +889,12 @@
     },
     "Farbslider" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbslider"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -699,6 +905,12 @@
     },
     "Farbvorschau" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbvorschau"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -709,6 +921,12 @@
     },
     "Farbwerkzeuge" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbwerkzeuge"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -719,6 +937,12 @@
     },
     "Farbwert kopieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbwert kopieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -729,6 +953,12 @@
     },
     "Farbwerte" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Farbwerte"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -739,6 +969,12 @@
     },
     "Fertig" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Fertig"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -749,6 +985,12 @@
     },
     "Format" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Format"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -759,6 +1001,12 @@
     },
     "Für diese Kategorie sind noch keine Symbole hinterlegt." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Für diese Kategorie sind noch keine Symbole hinterlegt."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -769,6 +1017,12 @@
     },
     "Gesamtdeckkraft" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gesamtdeckkraft"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -779,6 +1033,12 @@
     },
     "Gesamte Palette löschen?" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gesamte Palette löschen?"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -789,6 +1049,12 @@
     },
     "Gespeicherte Farbe %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gespeicherte Farbe %@"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -799,6 +1065,12 @@
     },
     "Gespeicherte Palette" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gespeicherte Palette"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -809,6 +1081,12 @@
     },
     "Gradient-Editoren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Gradient-Editoren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -817,8 +1095,32 @@
         }
       }
     },
+    "Grün" : {
+      "comment" : "Text for the green color slider.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Grün"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Green"
+          }
+        }
+      }
+    },
     "Halbkreis" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Halbkreis"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -829,6 +1131,12 @@
     },
     "Hell" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Hell"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -839,6 +1147,12 @@
     },
     "HEX" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "HEX"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -849,6 +1163,12 @@
     },
     "HEX kopieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "HEX kopieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -859,6 +1179,12 @@
     },
     "Hierarchisch" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Hierarchisch"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -869,6 +1195,12 @@
     },
     "Horizontal (X)" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Horizontal (X)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -879,6 +1211,12 @@
     },
     "Jeder Farbpunkt besitzt eine eigene Farbe und Position." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Jeder Farbpunkt hat eine eigene Farbe und Position."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -889,6 +1227,12 @@
     },
     "Keine Symbole gefunden" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Keine Symbole gefunden"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -899,6 +1243,12 @@
     },
     "Kontrastverhältnis" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Kontrastverhältnis"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -909,6 +1259,12 @@
     },
     "Kopiert" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Kopiert"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -919,6 +1275,12 @@
     },
     "Lege Farben und ihre Positionen innerhalb des elliptischen Verlaufs fest." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Lege die Farben und ihre Positionen innerhalb des elliptischen Verlaufs fest."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -929,6 +1291,12 @@
     },
     "Linear" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Linear"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -939,6 +1307,12 @@
     },
     "Linear Gradient" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Linearer Farbverlauf"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -949,6 +1323,12 @@
     },
     "Mehrfarbig" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mehrfarbig"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -961,6 +1341,12 @@
       "comment" : "A description of the system-based interface option in the settings.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mit „System“ folgt Sirelia automatisch dem Erscheinungsbild des iPhone."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -973,6 +1359,12 @@
       "comment" : "A footer for the language settings section of the settings view.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mit „Systemsprache“ verwendet Sirelia automatisch die bevorzugte Sprache des iPhone."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -983,6 +1375,12 @@
     },
     "Mittelpunkt" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mittelpunkt"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -993,6 +1391,12 @@
     },
     "Mittelpunkt über die Regler verändern" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mittelpunkt mit den Reglern anpassen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1003,6 +1407,12 @@
     },
     "Mittelpunkt zentrieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Mittelpunkt zentrieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1013,6 +1423,12 @@
     },
     "Monochrom" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Monochrom"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1023,6 +1439,12 @@
     },
     "Noch keine Farben gespeichert" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Noch keine Farben gespeichert"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1033,6 +1455,12 @@
     },
     "Öffnet Details und Exportoptionen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Öffnet Details und Exportoptionen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1043,6 +1471,12 @@
     },
     "Palette" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Palette"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1053,6 +1487,12 @@
     },
     "Radial" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radial"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1063,6 +1503,12 @@
     },
     "Radial Gradient" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radialer Farbverlauf"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1073,6 +1519,12 @@
     },
     "Radialer Farbverlauf" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radialer Farbverlauf"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1083,6 +1535,12 @@
     },
     "Radius" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Radius"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1093,6 +1551,12 @@
     },
     "RGBA Kanäle" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "RGBA-Kanäle"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1103,6 +1567,12 @@
     },
     "RGBA kopieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "RGBA kopieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1113,6 +1583,12 @@
     },
     "Richtung" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Richtung"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1121,8 +1597,32 @@
         }
       }
     },
+    "Rot" : {
+      "comment" : "Label for the red color slider.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Rot"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Red"
+          }
+        }
+      }
+    },
     "SF Symbols" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SF Symbols"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1133,6 +1633,12 @@
     },
     "Sirelia – Beispieltext Aa" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Sirelia – Beispieltext Aa"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1145,6 +1651,12 @@
       "comment" : "The section header for language settings.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Sprache"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1155,6 +1667,12 @@
     },
     "Startradius" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Startradius"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1165,6 +1683,12 @@
     },
     "Startwinkel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Startwinkel"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1175,6 +1699,12 @@
     },
     "SwiftUI" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SwiftUI"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1185,6 +1715,12 @@
     },
     "SwiftUI-Code kopieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SwiftUI-Code kopieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1195,6 +1731,12 @@
     },
     "SwiftUI-Code kopiert" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "SwiftUI-Code kopiert"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1205,6 +1747,12 @@
     },
     "Symbol" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1215,6 +1763,12 @@
     },
     "Symbol %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbol %@"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1225,6 +1779,12 @@
     },
     "Symbole" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbole"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1235,6 +1795,12 @@
     },
     "Symbolgröße" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbolgröße"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1245,6 +1811,12 @@
     },
     "Symbolname" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbolname"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1255,6 +1827,12 @@
     },
     "Symbolname kopieren" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbolname kopieren"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1265,6 +1843,12 @@
     },
     "Symbolnamen suchen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Symbolnamen suchen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1277,6 +1861,12 @@
       "comment" : "Display name for the system appearance mode.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "System"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1289,6 +1879,12 @@
       "comment" : "Label for the language settings section in the settings view.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Systemsprache"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1299,6 +1895,12 @@
     },
     "Text auf Schwarz" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Text auf Schwarz"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1309,6 +1911,12 @@
     },
     "Text auf Weiß" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Text auf Weiß"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1319,6 +1927,12 @@
     },
     "Verläufe" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Verläufe"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1329,6 +1943,12 @@
     },
     "Vertikal (Y)" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vertikal (Y)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1339,6 +1959,12 @@
     },
     "Vollkreis" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vollkreis"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1349,6 +1975,12 @@
     },
     "Vorlage %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vorlage %@"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1359,6 +1991,12 @@
     },
     "Vorlagen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vorlagen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1369,6 +2007,12 @@
     },
     "Vorschau" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Vorschau"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1379,6 +2023,12 @@
     },
     "WCAG AA benötigt mindestens 4,5:1 für normalen Text und 3:1 für großen Text." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "WCAG AA benötigt mindestens 4,5:1 für normalen Text und 3:1 für großen Text."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1389,6 +2039,12 @@
     },
     "WCAG Kontrast-Check" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "WCAG Kontrast-Check"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1397,8 +2053,32 @@
         }
       }
     },
+    "Wert eingeben" : {
+      "comment" : "A hint for the accessibility of a text field for entering a value.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Wert eingeben"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Enter a value"
+          }
+        }
+      }
+    },
     "Winkel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Winkel"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1409,6 +2089,30 @@
     },
     "Winkel %lld Grad" : {
       "localizations" : {
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "machine_translated",
+                  "value" : "Winkel %lld Grad"
+                }
+              }
+            }
+          }
+        },
         "en" : {
           "variations" : {
             "plural" : {
@@ -1461,6 +2165,12 @@
     },
     "Winkelbereich" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Winkelbereich"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1471,6 +2181,12 @@
     },
     "X %lld%% · Y %lld%%" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "X %1$lld%% · Y %2$lld%%"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -1487,6 +2203,12 @@
     },
     "Zu Favoriten hinzufügen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Zu Favoriten hinzufügen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1497,6 +2219,12 @@
     },
     "Zurücksetzen" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Zurücksetzen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",
@@ -1507,6 +2235,12 @@
     },
     "Zweitfarbe" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "machine_translated",
+            "value" : "Zweitfarbe"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "machine_translated",

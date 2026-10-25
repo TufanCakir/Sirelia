@@ -11,7 +11,7 @@ struct ColorSlider: View {
 
     // MARK: - Properties
 
-    let label: String
+    let label: LocalizedStringKey
 
     @Binding var value: Double
 
@@ -85,9 +85,8 @@ struct ColorSlider: View {
                         Image(systemName: "arrow.counterclockwise")
                     }
                     .buttonStyle(.borderless)
-                    .accessibilityLabel(
-                        "\(label) zurücksetzen"
-                    )
+                    .accessibilityLabel(Text(label))
+                    .accessibilityHint("Zurücksetzen")
                 }
 
                 if showsTextField {
@@ -107,9 +106,8 @@ struct ColorSlider: View {
                     .textFieldStyle(.roundedBorder)
                     .focused($isEditing)
                     .onSubmit(commitInput)
-                    .accessibilityLabel(
-                        "\(label) Wert eingeben"
-                    )
+                    .accessibilityLabel(Text(label))
+                    .accessibilityHint("Wert eingeben")
                 } else {
                     Text(formattedValue)
                         .font(
