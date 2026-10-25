@@ -95,7 +95,7 @@ private struct AppearanceSettingsSection: View {
                         .tag(option)
                 }
             }
-            .pickerStyle(.navigationLink)
+            .pickerStyle(.menu)
         } header: {
             Text("Darstellung")
         } footer: {
@@ -117,7 +117,7 @@ private struct LanguageSettingsSection: View {
                         .tag(option)
                 }
             }
-            .pickerStyle(.navigationLink)
+            .pickerStyle(.menu)
         } header: {
             Text("Sprache")
         } footer: {
