@@ -47,40 +47,28 @@ private enum ColorEditorType: String, CaseIterable, Identifiable {
 
 struct ColorLibraryView: View {
 
+    @Environment(StoreManager.self) private var store
+
     @StateObject private var paletteManager = PaletteManager()
+    @State private var isShowingPro = false
 
     var body: some View {
         List {
             Section {
                 ForEach(ColorEditorType.allCases) { type in
-                    NavigationLink {
-                        destination(for: type)
-                    } label: {
-                        HStack(spacing: 14) {
-                            preview(for: type)
-                                .frame(width: 76, height: 64)
-                                .clipShape(
-                                    RoundedRectangle(cornerRadius: 12)
-                                )
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .strokeBorder(
-                                            .primary.opacity(0.08),
-                                            lineWidth: 1
-                                        )
-                                }
-                                .accessibilityHidden(true)
-
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(type.title)
-                                    .font(.headline)
-
-                                Text(type.subtitle)
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                            }
+                    if type == .rgba && !store.isPro {
+                        Button {
+                            isShowingPro = true
+                        } label: {
+                            editorRow(for: type, isLocked: true)
                         }
-                        .padding(.vertical, 5)
+                        .buttonStyle(.plain)
+                    } else {
+                        NavigationLink {
+                            destination(for: type)
+                        } label: {
+                            editorRow(for: type, isLocked: false)
+                        }
                     }
                 }
             } header: {
@@ -92,6 +80,48 @@ struct ColorLibraryView: View {
             }
         }
         .navigationTitle("Farben")
+        .sheet(isPresented: $isShowingPro) {
+            ProUpgradeView()
+        }
+    }
+
+    private func editorRow(
+        for type: ColorEditorType,
+        isLocked: Bool
+    ) -> some View {
+        HStack(spacing: 14) {
+            preview(for: type)
+                .frame(width: 76, height: 64)
+                .clipShape(
+                    RoundedRectangle(cornerRadius: 12)
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 12)
+                        .strokeBorder(
+                            .primary.opacity(0.08),
+                            lineWidth: 1
+                        )
+                }
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(type.title)
+                    .font(.headline)
+
+                Text(type.subtitle)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            if isLocked {
+                Image(systemName: "lock.fill")
+                    .foregroundStyle(.secondary)
+                    .accessibilityLabel("Nur mit Sirelia Pro")
+            }
+        }
+        .padding(.vertical, 5)
     }
 
     // MARK: - Preview
@@ -171,4 +201,5 @@ struct ColorLibraryView: View {
     NavigationStack {
         ColorLibraryView()
     }
+    .environment(StoreManager())
 }

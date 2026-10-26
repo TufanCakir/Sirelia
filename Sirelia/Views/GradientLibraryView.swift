@@ -49,30 +49,26 @@ private enum GradientType: String, CaseIterable, Identifiable {
 
 struct GradientLibraryView: View {
 
+    @Environment(StoreManager.self) private var store
+    @State private var isShowingPro = false
+
     var body: some View {
         List {
             Section {
                 ForEach(GradientType.allCases) { type in
-                    NavigationLink {
-                        destination(for: type)
-                    } label: {
-                        HStack(spacing: 14) {
-                            gradientPreview(for: type)
-                                .frame(width: 76, height: 64)
-                                .clipShape(
-                                    RoundedRectangle(cornerRadius: 12)
-                                )
-
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(type.title)
-                                    .font(.headline)
-
-                                Text(type.subtitle)
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                            }
+                    if store.isPro {
+                        NavigationLink {
+                            destination(for: type)
+                        } label: {
+                            GradientLibraryRow(type: type, isLocked: false)
                         }
-                        .padding(.vertical, 5)
+                    } else {
+                        Button {
+                            isShowingPro = true
+                        } label: {
+                            GradientLibraryRow(type: type, isLocked: true)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             } header: {
@@ -84,12 +80,44 @@ struct GradientLibraryView: View {
             }
         }
         .navigationTitle("Verläufe")
+        .sheet(isPresented: $isShowingPro) {
+            ProUpgradeView()
+        }
+    }
+}
+
+private struct GradientLibraryRow: View {
+    let type: GradientType
+    let isLocked: Bool
+
+    var body: some View {
+        HStack(spacing: 14) {
+            gradientPreview
+                .frame(width: 76, height: 64)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text(type.title)
+                    .font(.headline)
+
+                Text(type.subtitle)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            if isLocked {
+                Image(systemName: "lock.fill")
+                    .foregroundStyle(.secondary)
+                    .accessibilityLabel("Nur mit Sirelia Pro")
+            }
+        }
+        .padding(.vertical, 5)
     }
 
     @ViewBuilder
-    private func gradientPreview(
-        for type: GradientType
-    ) -> some View {
+    private var gradientPreview: some View {
         switch type {
         case .linear:
             LinearGradient(
@@ -122,8 +150,11 @@ struct GradientLibraryView: View {
         }
     }
 
+}
+
+extension GradientLibraryView {
     @ViewBuilder
-    private func destination(
+    fileprivate func destination(
         for type: GradientType
     ) -> some View {
         switch type {
@@ -146,4 +177,5 @@ struct GradientLibraryView: View {
     NavigationStack {
         GradientLibraryView()
     }
+    .environment(StoreManager())
 }

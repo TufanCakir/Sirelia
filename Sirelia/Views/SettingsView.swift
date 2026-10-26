@@ -64,11 +64,15 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 }
 
 struct SettingsView: View {
+    @Environment(StoreManager.self) private var store
+
     @AppStorage("sirelia.appearance")
     private var appearance: AppAppearance = .system
 
     @AppStorage("sirelia.language")
     private var language: AppLanguage = .system
+
+    @State private var isShowingPro = false
 
     var body: some View {
         Form {
@@ -79,8 +83,42 @@ struct SettingsView: View {
             LanguageSettingsSection(
                 language: $language
             )
+
+            ProSettingsSection(
+                isPro: store.isPro,
+                showUpgrade: { isShowingPro = true }
+            )
         }
         .navigationTitle("Einstellungen")
+        .sheet(isPresented: $isShowingPro) {
+            ProUpgradeView()
+        }
+    }
+}
+
+private struct ProSettingsSection: View {
+    let isPro: Bool
+    let showUpgrade: () -> Void
+
+    var body: some View {
+        Section {
+            Button(action: showUpgrade) {
+                if isPro {
+                    Label(
+                        "Pro ist freigeschaltet",
+                        systemImage: "checkmark.seal.fill"
+                    )
+                } else {
+                    Label("Sirelia Pro freischalten", systemImage: "sparkles")
+                }
+            }
+        } header: {
+            Text("Sirelia Pro")
+        } footer: {
+            Text(
+                "Gradient-Editoren und der RGBA-Editor sind in Sirelia Pro enthalten."
+            )
+        }
     }
 }
 
@@ -132,4 +170,5 @@ private struct LanguageSettingsSection: View {
     NavigationStack {
         SettingsView()
     }
+    .environment(StoreManager())
 }
