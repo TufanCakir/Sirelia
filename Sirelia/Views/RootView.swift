@@ -24,7 +24,24 @@ struct RootView: View {
     @AppStorage("sirelia.language")
     private var language: AppLanguage = .system
 
+    @AppStorage("sirelia.hasCompletedOnboarding")
+    private var hasCompletedOnboarding = false
+
     var body: some View {
+        Group {
+            if hasCompletedOnboarding {
+                mainTabs
+            } else {
+                OnboardingView {
+                    hasCompletedOnboarding = true
+                }
+            }
+        }
+        .preferredColorScheme(appearance.colorScheme)
+        .environment(\.locale, language.locale)
+    }
+
+    private var mainTabs: some View {
         TabView(selection: $selectedTab) {
             Tab(
                 "Farben",
@@ -66,8 +83,6 @@ struct RootView: View {
                 }
             }
         }
-        .preferredColorScheme(appearance.colorScheme)
-        .environment(\.locale, language.locale)
     }
 }
 

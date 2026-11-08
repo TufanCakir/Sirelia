@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Gradient Type
+
 private enum GradientType: String, CaseIterable, Identifiable {
     case linear
     case radial
@@ -47,28 +49,17 @@ private enum GradientType: String, CaseIterable, Identifiable {
     }
 }
 
+// MARK: - Gradient Library
+
 struct GradientLibraryView: View {
-
-    @Environment(StoreManager.self) private var store
-    @State private var isShowingPro = false
-
     var body: some View {
         List {
             Section {
                 ForEach(GradientType.allCases) { type in
-                    if store.isPro {
-                        NavigationLink {
-                            destination(for: type)
-                        } label: {
-                            GradientLibraryRow(type: type, isLocked: false)
-                        }
-                    } else {
-                        Button {
-                            isShowingPro = true
-                        } label: {
-                            GradientLibraryRow(type: type, isLocked: true)
-                        }
-                        .buttonStyle(.plain)
+                    NavigationLink {
+                        destination(for: type)
+                    } label: {
+                        GradientLibraryRow(type: type)
                     }
                 }
             } header: {
@@ -80,21 +71,40 @@ struct GradientLibraryView: View {
             }
         }
         .navigationTitle("Verläufe")
-        .sheet(isPresented: $isShowingPro) {
-            ProUpgradeView()
+    }
+
+    // MARK: - Navigation
+
+    @ViewBuilder
+    fileprivate func destination(
+        for type: GradientType
+    ) -> some View {
+        switch type {
+        case .linear:
+            LinearGradientView()
+        case .radial:
+            RadialGradientView()
+        case .angular:
+            AngularGradientView()
+        case .elliptical:
+            EllipticalGradientView()
         }
     }
 }
 
+// MARK: - Gradient Row
+
 private struct GradientLibraryRow: View {
     let type: GradientType
-    let isLocked: Bool
 
     var body: some View {
         HStack(spacing: 14) {
             gradientPreview
                 .frame(width: 76, height: 64)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(
+                    RoundedRectangle(cornerRadius: 12)
+                )
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 5) {
                 Text(type.title)
@@ -106,15 +116,11 @@ private struct GradientLibraryRow: View {
             }
 
             Spacer()
-
-            if isLocked {
-                Image(systemName: "lock.fill")
-                    .foregroundStyle(.secondary)
-                    .accessibilityLabel("Nur mit Sirelia Pro")
-            }
         }
         .padding(.vertical, 5)
     }
+
+    // MARK: - Gradient Preview
 
     @ViewBuilder
     private var gradientPreview: some View {
@@ -149,33 +155,12 @@ private struct GradientLibraryRow: View {
             )
         }
     }
-
 }
 
-extension GradientLibraryView {
-    @ViewBuilder
-    fileprivate func destination(
-        for type: GradientType
-    ) -> some View {
-        switch type {
-        case .linear:
-            LinearGradientView()
-
-        case .radial:
-            RadialGradientView()
-
-        case .angular:
-            AngularGradientView()
-
-        case .elliptical:
-            EllipticalGradientView()
-        }
-    }
-}
+// MARK: - Preview
 
 #Preview {
     NavigationStack {
         GradientLibraryView()
     }
-    .environment(StoreManager())
 }

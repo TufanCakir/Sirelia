@@ -64,15 +64,13 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 }
 
 struct SettingsView: View {
-    @Environment(StoreManager.self) private var store
+    @State private var showsOnboarding = false
 
     @AppStorage("sirelia.appearance")
     private var appearance: AppAppearance = .system
 
     @AppStorage("sirelia.language")
     private var language: AppLanguage = .system
-
-    @State private var isShowingPro = false
 
     var body: some View {
         Form {
@@ -84,14 +82,21 @@ struct SettingsView: View {
                 language: $language
             )
 
-            ProSettingsSection(
-                isPro: store.isPro,
-                showUpgrade: { isShowingPro = true }
-            )
+            Section("Einführung") {
+                Button {
+                    showsOnboarding = true
+                } label: {
+                    Label("Einführung erneut ansehen", systemImage: "sparkles")
+                }
+            }
         }
         .navigationTitle("Einstellungen")
-        .sheet(isPresented: $isShowingPro) {
-            ProUpgradeView()
+        .sheet(isPresented: $showsOnboarding) {
+            OnboardingView {
+                showsOnboarding = false
+            }
+            .environment(\.locale, language.locale)
+            .preferredColorScheme(appearance.colorScheme)
         }
     }
 }
@@ -170,5 +175,4 @@ private struct LanguageSettingsSection: View {
     NavigationStack {
         SettingsView()
     }
-    .environment(StoreManager())
 }
